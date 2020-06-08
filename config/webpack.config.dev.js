@@ -28,7 +28,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./src/index.pug'),
+      template: path.resolve('./src/views/index.pug'),
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({ filename: './css/app.bundle.css' }),

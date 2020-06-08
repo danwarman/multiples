@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: [
     `${path.resolve(__dirname, '../src')} + /js/app.js`,
-    `${path.resolve(__dirname, '../src')} + /scss/app.scss`,
+    `${path.resolve(__dirname, '../src')} + /scss/app.scss`
   ],
   output: {
     path: path.resolve(__dirname, '../public'),
@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({ cleanAfterEveryBuildPatterns: [ 'public' ] }),
     new HtmlWebpackPlugin({
-      template: path.resolve('./src/index.pug'),
+      template: path.resolve('./src/views/index.pug'),
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({ filename: './css/app.bundle.css' })
