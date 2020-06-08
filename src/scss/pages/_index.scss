@@ -1,0 +1,18 @@
+/*
+ * Landing page
+ */
+
+.number-board {
+  @include number-board(
+    $board-max-width,
+    $header-height
+  );
+
+  &__number-btn {
+    @include number-button(
+      $btn-default-bg-color,
+      $btn-active-bg-color,
+      $btn-highlighted-bg-color
+    );
+  }
+}

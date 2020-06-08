@@ -1,0 +1,81 @@
+/*
+ * Mixins
+ */
+
+// Number Board
+@mixin number-board(
+  $max-width,
+  $header-height
+) {
+  $gap: 6px;
+  $margin-top: calc(#{$header-height} + #{$gap});
+
+  display: grid;
+  gap: $gap;
+  margin: $margin-top auto 0;
+  padding: 0 $gap;
+  box-sizing: border-box;
+
+  @include respond-to('x-small') {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include respond-to('small') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to('medium') {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: $max-width;
+  }
+}
+
+// Number Button
+@mixin button($bg-color) {
+  background-color: $bg-color;
+
+  &:hover {
+    background-color: lighten($bg-color, 10%);
+  }
+}
+
+// Number Button states
+@mixin number-button(
+  $default-bg-color,
+  $active-bg-color,
+  $highlighted-bg-color,
+) {
+  &--active {
+    @include button($active-bg-color);
+  }
+
+  &--highlighted {
+    @include button($highlighted-bg-color);
+  }
+
+  // Default
+  &:not(&--active, &--highlighted) {
+    @include button($default-bg-color);
+  }
+}
+
+/// Responsive Breakpoint Manager
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+      + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

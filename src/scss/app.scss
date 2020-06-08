@@ -1,4 +1,6 @@
-@import 'abstracts/variables';
+@import
+  'abstracts/mixins',
+  'abstracts/variables';
 
 @import
   'base/reset',
@@ -9,3 +11,5 @@
 @import
   'layout/header',
   'layout/footer';
+
+@import 'pages/index';
