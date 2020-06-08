@@ -1,0 +1,24 @@
+/*
+ * Variables
+ */
+
+// Breakpoints
+$breakpoints: (
+  'small': '(max-width: 520px)',
+  'medium': '(min-width: 521px) and (max-width: 667px)',
+  'large': '(min-width: 668px)'
+);
+
+// Header
+$default-header-bg-color: #FFDFBA;
+$header-height: 65px;
+
+// Number Board
+$board-max-width: 650px;
+$border-default-color: #000000;
+
+// Board Colours
+$btn-default-font-color: #000000;
+$btn-default-bg-color: #FDFD96;
+$btn-active-bg-color: #EAAAFF;
+$btn-highlighted-bg-color: #89CFF0;

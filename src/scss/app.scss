@@ -1,2 +1,7 @@
-@import 'base/reset';
+@import 'abstracts/variables';
+
+@import
+  'base/reset',
+  'base/typography';
+
 @import 'layout/footer';
