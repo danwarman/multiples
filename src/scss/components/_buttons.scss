@@ -1,0 +1,17 @@
+/*
+ * Button component
+ */
+
+ button {
+  border: 1px solid $border-default-color;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 1.8em;
+  color: $btn-default-font-color;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+}
