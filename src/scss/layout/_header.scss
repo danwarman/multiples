@@ -1,0 +1,21 @@
+/*
+ * Header
+ */
+
+header {
+  $border-size: 1px;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #FFDFBA;
+  box-sizing: border-box;
+  border-bottom: $border-size solid #000000;
+
+  h1 {
+    margin: 0;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: calc(#{$header-height} - #{$border-size})
+  }
+}
