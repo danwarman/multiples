@@ -2,6 +2,7 @@ import { numberBoard } from './helpers/dom';
 
 import { getButtonState } from './helpers/buttonData';
 import { handleActiveButton } from './lib/handleActiveButton';
+import { handleDefaultButton } from './lib/handleDefaultButton';
 
 const boardState = { activeNumber: 0 };
 
@@ -20,5 +21,9 @@ numberBoard.addEventListener('click', e => {
   if (selectedButtonState === 'active') handleActiveButton(boardState);
   // ''highlighted' => handleHighlightedButton
   // 'highlighted-sum' => handleHighlightedSumButton
-  // 'default' => handleDefaultButton
+
+  if (selectedButtonState === 'default') handleDefaultButton(
+    selectedButton,
+    boardState
+  );
 });
