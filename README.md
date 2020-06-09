@@ -8,6 +8,8 @@ See the brief [here](BRIEF.md).
 ## Preview
 [danwarman-multiples.netlify.app](https://danwarman-multiples.netlify.app/) *(Last checked: 9/06/20 18:00)*
 
+![Multiples Screenshot](screenshot.png)
+
 # Summary
 ## How to use
 Pressing a number button will highlight all of the multiples of the number you have selected. 
