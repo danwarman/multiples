@@ -38,13 +38,12 @@ You can then press the highlighted button to reveal the sum.
 
 
 ## Outstanding / Considerations
-// TODO
-
-*Notes:**
-* Jest - Testing
-* Refactor JS
-* Config for extensibility eg. numbers in grid (12^), items per row per breakpoint
-* Performance and Accessibility beyond dyslexia-friendly colours
+*Notes:*
+* Testing - I have no testing in place. The code doesn't lend itself so well to writing solid tests so it'll need refactoring.
+* Refactor JS - To improve readability and implement full coverage of testing.
+* Config - Introduce for extensibility eg. numbers in grid (12^), items per row per breakpoint.
+  * I used Pug knowing that I could very simply generate the grid at build rather than runtime. This and the client-side JS could accept an environment variable (for example) to configure.
+* Performance and Accessibility - currently using dyslexia-friendly colours and a child-friendly sans-serif font. Webpack bundling and minifiying files on build for production.
 
 # Installation
 ## Clone project
@@ -104,4 +103,4 @@ npm run start:dev
 ```
 This will run the `webpack-dev-server` per the dev config. It will open the application in the browser on an available localhost port.
 
-In this mode, you can make changes to the code which, on save, will retrigger webpack and hot reload in the browser.
+In this mode, you can make changes to the code which, on save, will re-trigger webpack and hot reload in the browser.
